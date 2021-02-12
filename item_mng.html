@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Management</title>
+    <style>
+        input,select{
+            border-radius: 5px;
+            outline: none;
+            width: 90%;
+            padding: 7px 3px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+        }
+
+        #pannel-heading{
+            background-color: aqua;
+            color: #a52a2a;
+        }
+
+        .btn{
+            padding: 5px 7px;
+            border-radius: 5px;
+        }
+
+        #btnAdd{
+            background-color:#5cb85c;
+            border: 1px solid #5cb85c;
+            padding: 5px 10px;
+            color: white;
+        }
+
+        #btnUpdate,#btnClear,.Modify{
+            background-color:orange;
+            border: 1px solid orange;
+            color: white;
+        }
+
+        #btnDelete{
+            background-color: red;
+            border: 1px solid red;
+            color: white;
+        }
+
+        #view{
+            vertical-align: top;
+        }
+
+        #tblItem td,#tblItem th{
+            border-bottom: 1px solid #888888;
+        }
+
+        #tblItem th{
+            padding: 7px;
+            text-align: left;
+        }
+
+        #tblItem>tbody>tr:nth-child(odd){
+            background-color: #888888;
+        }
+
+        #tblItem tbody tr:hover{
+            background-color: yellow;
+        }
+
+        body {
+          background-color: #f0f8ff;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <table border="1" width="100%">
+        <tr>
+            <td colspan="3" id="pannel-heading"><h3>NYFYNY Product Management - (Low Cost Solution)</h3></td>
+        </tr>
+        <tr>
+            <td id="form" width="35%">
+                <form>
+                    <table width="100%" id="formtbl">
+
+                        <tr>
+                            <td width="40%">Category</td>
+                            <td><select>
+                                <option disabled="disabled" selected="selected">Select Category</option>
+                                <option>Fashion</option>
+                                <option>Gem</option>
+                                <option>Jewellery</option>
+                                <option>Wedding</option>
+                            </select></td>
+                        </tr>
+
+                        <tr>
+                            <td>Sub Category</td>
+                            <td><select>
+                                <option disabled="disabled" selected="selected">Select Sub Category</option>
+                                <option>Blue Sapphire</option>
+                                <option>Yellow Sapphire</option>
+                                <option>Ruby</option>
+                                <option>Alexandrite</option>
+                                <option>Emerald</option>
+                            </select></td>
+                        </tr>
+
+                        <tr>
+                            <td>Name</td>
+                            <td><input type="text" id="txtName" placeholder="Enter Name Here"/></td>
+                        </tr>
+
+                        <tr>
+                            <td>Sales Price</td>
+                            <td><input type="text" id="txtSprice" placeholder="Enter Salse Price Here"/></td>
+                        </tr>
+
+                        <tr>
+                            <td>Purchace Price</td>
+                            <td><input type="text" id="txtPprice" placeholder="Enter Purchace Price Here"/></td>
+                        </tr>
+
+                        <tr>
+                            <td>QTY</td>
+                            <td><input type="text" id="txtQty" placeholder="Enter Qty Here"/></td>
+                        </tr>
+
+                        <tr>
+                            <td> </td>
+                            <td>
+                                <button class="btn" id="btnDelete">Delete</button>
+                                <button class="btn" id="btnUpdate">Update</button>
+                                <button class="btn" id="btnAdd">Add</button>
+                                <button class="btn" id="btnClear">Clear</button>
+                            </td>
+                        </tr>
+
+                    </table>
+                </form>
+            </td>
+            <td id="view">
+                <table id="tblItem" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Brand</th>
+                        <th>Sales Price</th>
+                        <th>Modify</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Blue Sap Gem</td>
+                            <td>Gem</td>
+                            <td>Blue Sapphire</td>
+                            <td>$3,602.00</td>
+                            <td><button class="btn Modify">Modify</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Swarnmahal Earrings</td>
+                            <td>Jewellery</td>
+                            <td>Earrings</td>
+                            <td>$602.00</td>
+                            <td><button class="btn Modify">Modify</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>HoneyMoon Weddings Set</td>
+                            <td>Wedding</td>
+                            <td>Wedding Set</td>
+                            <td>$10602.00</td>
+                            <td><button class="btn Modify">Modify</button></td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
